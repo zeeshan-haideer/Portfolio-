@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeeshan Haider</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .about-main {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #B4B4B4;
+            padding: 100px 100px;
+        }
+
+        .about-main h1 {
+            font-size: 4rem;
+            color: #B4B4B4;
+        }
+
+        .about-main p {
+            width: 60%;
+            text-align: justify;
+            font-size: 1.2rem;
+            color: #B4B4B4;
+            padding: 20px 50px;
+        }
+
+        .det-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            padding: 0px 100px;
+            margin-bottom: 100px;
+        }
+
+        .card {
+            display: flex;
+            align-items: left;
+            justify-content: center;
+            color: #B4B4B4;
+            background-color: transparent;
+
+        }
+
+        .card h1 {
+            font-size: 4rem;
+        }
+
+        .card span {
+            font-size: 1.2rem;
+        }
+
+        .heading h1 span {
+            color: rgb(232, 232, 22);
+            padding: 0px 10px;
+        }
+
+        .heading p {
+            text-align: justify;
+        }
+
+        .heading h1 {
+            text-align: left;
+        }
+
+        .education {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 100px 100px;
+        }
+
+        .education h1 {
+            font-size: 4rem;
+            color: #B4B4B4;
+        }
+
+        .education p {
+            width: 60%;
+            text-align: justify;
+            font-size: 1.2rem;
+            color: #B4B4B4;
+            padding: 20px 50px;
+        }
+
+        .edu-details {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: #B4B4B4;
+        }
+
+        .edu-box {
+            width: 90%;
+            border-left: 2px solid #B4B4B4;
+            padding: 0px 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .inner-box {
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .edu {
+            height: 50px !important;
+            width: fit-content;
+            position: relative;
+            padding: 10px 20px;
+
+            border: 2px solid rgb(232, 232, 22);
+            border-radius: 30px;
+        }
+
+        .edu::after {
+            content: "";
+            height: 2px;
+            /* Thin horizontal line */
+            width: 50px;
+            /* Full width of the span */
+            background-color: #B4B4B4;
+            position: absolute;
+            left: -25px;
+            top: 20px;
+
+
+            transform: translate(-50%);
+
+
+
+
+
+        }
+
+        .edu::before {
+            content: "";
+            height: 5px;
+            /* Thin horizontal line */
+            width: 5px;
+            /* Full width of the span */
+            background-color: #B4B4B4;
+            position: absolute;
+            left: -53px;
+            top: 19px;
+            border-radius: 50%;
+            transform: translate(-50%);
+        }
+
+        .Services {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #B4B4B4;
+            padding: 100px 100px;
+        }
+
+        .Services h1 {
+            font-size: 4rem;
+            color: #B4B4B4;
+        }
+
+        .Services p {
+            width: 60%;
+            text-align: justify;
+            font-size: 1.2rem;
+            color: #B4B4B4;
+            padding: 20px 50px;
+        }
+
+
+        @media (max-width: 768px) {
+            .about-main {
+                height: 300px;
+                padding: 20px 20px;
+
+            }
+
+            .about-main h1 {
+                font-size: 2rem;
+            }
+
+            .about-main p {
+                font-size: .9rem;
+                width: 100%;
+            }
+
+            .Services {
+                height: 300px;
+                padding: 20px 20px;
+
+            }
+
+            .Services h1 {
+                font-size: 2rem;
+            }
+
+            .Services p {
+                font-size: .9rem;
+                width: 100%;
+            }
+
+            .det-container {
+                grid-template-columns: 1fr 1fr;
+                padding: 0 20px;
+                margin-bottom: 0px;
+            }
+
+            .card h1 {
+                font-size: 2rem;
+            }
+
+            .card span {
+                font-size: .9rem;
+
+            }
+
+            .education {
+                height: 300px;
+                padding: 20px 20px;
+
+            }
+
+            .education h1 {
+                font-size: 2rem;
+            }
+
+            .education p {
+                font-size: .9rem;
+                width: 100%;
+            }
+
+            .inner-box {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+     <!-- Nav Bar From Bootstrap -->
+      <nav  class="navbar navbar-expand-lg  " id="myHeading1">
+        <div id="header" class="container-fluid">
+          <a class="navbar-brand" href=" index.html" >
+            <img src="logo.png" alt="">
+          </a>
+          <!-- Updated Toggler Button -->
+          <button class="navbar-toggler" onclick="toggleHeading()">
+           
+                 <div class="toggle">
+                  <div class="bars" id="bar1"></div>
+                  <div class="bars" id="bar2"></div>
+                  <div class="bars" id="bar3"></div>
+                </div>
+              
+          </button>
+          <!-- Collapsible Content -->
+          <div  class="collapse navbar-collapse justify-content-center justify-content-evenly"  id="myHeading">
+            <ul class="navbar-nav">
+             <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <a class="nav-link" href="https://www.facebook.com/share/18KsitDQNV/"><i class="fa-brands fa-square-facebook"></i></a>
+                <a class="nav-link" href="https://www.instagram.com/zee.shan.50?igsh=MTN1YzhsdmNjb2c2eg=="><i class="fa-brands fa-instagram"></i></a>
+                <a class="nav-link" href="https://www.linkedin.com/in/zeeshan-haider-125108305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="nav-link" href="https://wa.me/03484926218"><i class="fa-brands fa-whatsapp"></i></a>
+              </form>
+          </div>
+        </div>
+      </nav>
+
+    <div class="about-main">
+        <h1> About Me</h1>
+        <p>With over 12 years of dedicated focus on designing products that achieve business goals, I have established
+            myself as a trusted professional in the industry.</p>
+    </div>
+
+    <!-- Cards of little bit experience -->
+    <div class="det-container">
+        <div class="card">
+            <h1 id="hed0">8+</h1>
+            <span>Years Of Experience</span>
+        </div>
+        <div class="card">
+            <h1>1K+</h1>
+            <span>Complete Projects</span>
+        </div>
+        <div class="card">
+            <h1 id="hed1">19+</h1>
+            <span>Client Satisfactions</span>
+        </div>
+        <div class="card">
+            <h1 id="hed">20+</h1>
+            <span>Cup of coffe</span>
+        </div>
+    </div>
+
+    <!--  Abou mee -->
+    <div class="carousal-part">
+        <div class="carousal-img">
+            <img src="main-1.jpg" alt="">
+            <!-- <div class="carousal-img1">
+                <div class="box box1"></div>
+                <div class="box box2"></div>
+            </div> -->
+        </div>
+        <div class="carousal-content">
+            <div class="heading">
+                <h1>A passionate <span>web designer </span>turning <span> ideas</span> into visually stunning,
+                    user-friendly websites.</h1>
+            </div>
+            <div class="intro-line">
+                <p> Hello! I’m Stefeny a self-taught & award-winning Digital Designer & Developer with over fifteen
+                    years of work experience. I started in my children’s room and got pro at renowned digital nexum AG
+                    agencies.
+                </p>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                    professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                    consectetur, from a Lorem Ipsum passage.
+                </p>
+            </div>
+            <!-- <div class="download-btn">
+                <button>Download CV <i class="fa-solid fa-arrow-down"></i> </button>
+            </div> -->
+
+        </div>
+
+    </div>
+    <div class="education">
+        <h1>Education & Experience</h1>
+        <p>Established history of success in design and development, consistently delivering valuable insights and
+            driving significant results.</p>
+    </div>
+    <div class="edu-details">
+        <div class="edu-box">
+            <div class="inner-box">
+                <span class="edu">2020 - Present</span>
+
+                <h3>BloomHub Technology</h3>
+                <p>@ Application Developer
+                    As a product designer at a leading e-commerce company, I was responsible for designing user
+                    interfaces
+                    for the company's online shopping platform. I collaborated closely with the company's marketing and
+                    development teams to create designs that not only looked great but also drove conversions and
+                    increased
+                    sales.</p>
+            </div>
+            <div class="inner-box">
+                <span class="edu">2020 - Present</span>
+
+                <h3>BloomHub Technology</h3>
+                <p>@ Application Developer
+                    As a product designer at a leading e-commerce company, I was responsible for designing user
+                    interfaces
+                    for the company's online shopping platform. I collaborated closely with the company's marketing and
+                    development teams to create designs that not only looked great but also drove conversions and
+                    increased
+                    sales.</p>
+            </div>
+            <div class="inner-box">
+                <span class="edu">2020 - Present</span>
+
+                <h3>BloomHub Technology</h3>
+                <p>@ Application Developer
+                    As a product designer at a leading e-commerce company, I was responsible for designing user
+                    interfaces
+                    for the company's online shopping platform. I collaborated closely with the company's marketing and
+                    development teams to create designs that not only looked great but also drove conversions and
+                    increased
+                    sales.</p>
+            </div>
+            <div class="inner-box">
+                <span class="edu">2020 - Present</span>
+
+                <h3>BloomHub Technology</h3>
+                <p>@ Application Developer
+                    As a product designer at a leading e-commerce company, I was responsible for designing user
+                    interfaces
+                    for the company's online shopping platform. I collaborated closely with the company's marketing and
+                    development teams to create designs that not only looked great but also drove conversions and
+                    increased
+                    sales.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="Services">
+        <h1> Services</h1>
+        <p>My Services Pave the Way for Exceptional Experiences, Where Quality and Commitment Define Every Interaction."
+        </p>
+    </div>
+    <style>
+        .Services-card {
+            width: 100%;
+            padding: 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .Services-inner-card {
+            height: 250px;
+            width: 350px;
+           
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            color: #B4B4B4;
+            padding: 20px;
+            background-color: #000;
+        }
+        .Services-inner-card:hover{
+            border: 1px solid rgb(232, 232, 22);
+        }
+
+        .Services-inner-card i {
+            font-size: 35px;
+            height: 50px;
+            color: rgb(232, 232, 22);
+        }
+        .card-heading{
+            height: 70px;
+            width: 100%;
+            display: flex;
+            justify-content:  left;
+            align-items: center;
+        }
+        @media (max-width: 1200px) {
+    .Services-card {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .Services-card {
+        grid-template-columns: 1fr; /* 1 column for small screens */
+        padding: 0px 50px; /* Further reduce padding */
+    }
+
+    .Services-inner-card {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .Services-inner-card {
+        max-width: 100%; /* Full width for very small screens */
+    }
+}
+    </style>
+    <div class="Services-card">
+        <div class="Services-inner-card">
+            <div class="card-header">
+               <span><i class="fa-solid fa-globe"></i></span> 
+            </div>
+
+            <h1>Brand Identity Design</h1>
+            <p>bionik gives you the blocks & kits you need to create a true website within minutes.</p>
+
+        </div>
+        <div class="Services-inner-card">
+            <div class="card-header">
+               <span><i class="fa-solid fa-feather-pointed"></i></span> 
+            </div>
+
+            <h1>Website Design</h1>
+            <p>bionik gives you the blocks & kits you need to create a true website within minutes.</p>
+
+        </div>
+        <div class="Services-inner-card">
+            <div class="card-header">
+               <span> <i class="fas fa-folder"></i></span> 
+            </div>
+
+            <h1>Application Design</h1>
+            <p>bionik gives you the blocks & kits you need to create a true website within minutes.</p>
+
+
+        </div>
+    </div>
+
+ <!-- Ready Card  -->
+
+
+
+ <div class="card-contact">
+    <div class="inner-card">
+        <h3>Are You Ready to kickstart your project?</h3>
+        <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities to push
+            the boundaries of design and deliver exceptional work.</p>
+        <button> Let's Talk <i class="fa-solid fa-arrow-down"></i> </button>
+    </div>
+
+</div>
+
+
+<!-- Footer -->
+
+<div class="footer"> ©Copyright <span> Wize </span>All Rights Reserved.</div>
+
+
+
+
+</body>
+<script src="srript.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+</html>

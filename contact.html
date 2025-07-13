@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeeshan Haider</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <link rel="stylesheet" href="style.css">
+
+
+  <style>
+    .Contact-main {
+      height: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #B4B4B4;
+      padding: 0px 100px;
+    }
+
+    .Contact-main h1 {
+      font-size: 4rem;
+      color: #B4B4B4;
+    }
+
+    .Contact-main p {
+      width: 60%;
+      text-align: justify;
+      font-size: 1.2rem;
+      color: #B4B4B4;
+      padding: 20px 50px;
+    }
+    
+    .contact-form {
+      width: 100%;
+      height: 500px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0px 100px;
+      gap: 20px;
+    }
+    .label1 input{
+      width: 100%;
+    }
+    label{
+      color: #B4B4B4;
+      font-size: 1rem;
+    }
+    input{
+      height: 50px;
+      width: 100%;
+      color: black;
+    }
+    textarea{
+      width: 100%;
+      height: 200px;
+    }
+     
+    .label3 {
+            grid-column: 1/3;  /* Start from column 1 and span to column 3 */
+        }
+
+    @media (max-width: 768px) {
+      .Contact-main {
+        height: 300px;
+        padding: 20px 20px;
+
+      }
+
+      .Contact-main h1 {
+        font-size: 2rem;
+      }
+
+      .Contact-main p {
+        font-size: .9rem;
+        width: 100%;
+      }
+      .contact-form {
+      width: 100%;
+      height: 600px;
+      padding: 10px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <!-- Nav Bar From Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div id="header" class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="">
+      </a>
+      <!-- Updated Toggler Button -->
+      <button class="navbar-toggler" onclick="toggleHeading()">
+
+        <div class="toggle">
+          <div class="bars" id="bar1"></div>
+          <div class="bars" id="bar2"></div>
+          <div class="bars" id="bar3"></div>
+        </div>
+
+      </button>
+      <!-- Collapsible Content -->
+      <div class="collapse navbar-collapse justify-content-center justify-content-evenly" id="myHeading">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <a class="nav-link" href="https://www.facebook.com/share/18KsitDQNV/"><i class="fa-brands fa-square-facebook"></i></a>
+          <a class="nav-link" href="https://www.instagram.com/zee.shan.50?igsh=MTN1YzhsdmNjb2c2eg=="><i class="fa-brands fa-instagram"></i></a>
+          <a class="nav-link" href="https://www.linkedin.com/in/zeeshan-haider-125108305?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+          <a class="nav-link" href="https://wa.me/03484926218"><i class="fa-brands fa-whatsapp"></i></a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="Contact-main">
+    <h1>Contact</h1>
+    <p>I write about design, productivity, tech and my creative process. Subscribe to my newsletter to stay in
+      touch. I sync once a month with no spam and ads.</p>
+  </div>
+   
+    <form  name="formu1" action="https://api.web3forms.com/submit" method="POST" class="contact-form"  >
+      <input type="hidden" name="access_key" value="5bcfb66a-40ea-4355-af6c-11aa4177bc68">
+
+      <div class="label1">
+        <label for="userName">Name:</label><br>
+        <input type="text" id="userName" name="userName" placeholder="Enter Name" required><br><br>
+      </div>
+      <div class="label2">
+        <label for="userEmail">Email:</label><br>
+        <input type="email" id="userEmail" name="userEmail" placeholder="Enter Email"required><br><br>
+      </div>
+      <div class="label3">
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"placeholder="Write Your Message" required></textarea><br><br>
+      </div>
+      <div class="download-btn">
+      <button type="submit" onclick="submit_form()">Send Email</button></div> 
+    </form>
+   
+<!-- Footer -->
+<div class="footer"> ©Copyright <span> Wize </span>All Rights Reserved.</div>
+
+
+
+</body>
+
+
+
+
+  <script>
+    
+
+function submit_form() {
+document.formu1.submit();
+document.formu1.reset(); 
+}
+  </script>
+<script src="srript.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</html>
