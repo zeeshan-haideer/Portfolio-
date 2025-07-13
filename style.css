@@ -4,7 +4,11 @@
     box-sizing: border-box;
     
 }
-
+.logo-name{
+    font-family: 'Sofia';
+    font-size: 2rem;
+    color: #B4B4B4;
+}
 body {
     background-image: linear-gradient(to right, rgb(3, 3, 3), rgb(16, 2, 56));
 }

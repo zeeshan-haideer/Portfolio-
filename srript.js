@@ -26,42 +26,37 @@
                 heading.style.display = "none";  // Hide the heading
             }
         }
-        window.onload = function() {
-            const heading = document.getElementById("hed");
-            const heading1 = document.getElementById("hed1");
-            const heading0 = document.getElementById("hed0");
+    window.onload = function () {
+    const hed0 = document.getElementById("hed0"); // 0 → 0.6
+    const hed = document.getElementById("hed");   // 0 → 2
+    const hed1 = document.getElementById("hed1"); // 0 → 10
 
+    let count0 = 0.0;
+    let count = 0.0;
+    let count1 = 0;
 
-            let count = 0;
-
-            // Set an interval to increment the count from 0 to 19
-            const interval = setInterval(function() {
-                if (heading != null && heading0 != null &&  heading1!=null){
-                heading.textContent = count+"+";  // Update the content of #hed
-                count=count+2;
-                heading1.textContent = count+"+";  // Update the content of #hed
-                count=count+1;
-                }
-                // When count reaches 19, stop the interval
-                if (count > 2) {
-                    clearInterval(interval);
-                }
-            }, 100);  // Change the number every 100 milliseconds
-           let  count1=0;
-            const interval1 = setInterval(function() {
-                if (heading != null && heading0 != null &&  heading1!=null){
-
-                heading0.textContent = count1+"+";  // Update the content of #hed
-                count1++;
-                count1++;
-                }
-
-                // When count reaches 19, stop the interval
-                if (count > 2) {
-                    clearInterval(interval1);
-                }
-            }, 100);
+    const interval = setInterval(() => {
+        // Counter for #hed0
+        if (hed0 && count0 <= 0.6) {
+            hed0.textContent = count0.toFixed(1) + "+";
+            count0 += 0.1;
         }
 
+        // Counter for #hed
+        if (hed && count <= 3) {
+            hed.textContent = count + "+";
+            count += 1;
+        }
 
- 
+        // Counter for #hed1
+        if (hed1 && count1 <= 10) {
+            hed1.textContent = count1.toFixed(0) + "+";
+            count1 += 1;
+        }
+
+        // Stop when all are complete
+        if (count0 > 0.6 && count > 3 && count1 > 10) {
+            clearInterval(interval);
+        }
+    }, 100);
+};
