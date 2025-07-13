@@ -43,7 +43,7 @@
                 count=count+1;
                 }
                 // When count reaches 19, stop the interval
-                if (count > 20) {
+                if (count > 2) {
                     clearInterval(interval);
                 }
             }, 100);  // Change the number every 100 milliseconds
@@ -57,7 +57,7 @@
                 }
 
                 // When count reaches 19, stop the interval
-                if (count > 20) {
+                if (count > 2) {
                     clearInterval(interval1);
                 }
             }, 100);
